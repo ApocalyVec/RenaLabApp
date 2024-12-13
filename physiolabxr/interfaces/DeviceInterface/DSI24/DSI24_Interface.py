@@ -7,9 +7,10 @@ from physiolabxr.interfaces.DeviceInterface.DSI24.DSI24_Process import DSI24_pro
 from physiolabxr.third_party.WearableSensing.DSI_py3 import *
 from physiolabxr.interfaces.DeviceInterface.DeviceInterface import DeviceInterface
 
-def run_dsi24_headset_process(port, com_port):
+
+def run_dsi24_headset_process(port, com_port, impedance):
     terminate_event = Event()
-    headset_process = Process(target=DSI24_process, args=(terminate_event, port, com_port))
+    headset_process = Process(target=DSI24_process, args=(terminate_event, port, com_port, impedance))
     headset_process.start()
     return headset_process, terminate_event
 
@@ -28,9 +29,11 @@ class DSI24_Interface(DeviceInterface):
         self.port = self.socket.getsockopt(zmq.LAST_ENDPOINT).decode("utf-8").split(":")[-1]
         self.data_process = None
         self.terminate_event = None
+        self.battery_level = None
+        self.impedanceValues = []
 
-    def start_stream(self, bluetooth_port):
-        self.data_process, self.terminate_event = run_dsi24_headset_process(self.port, bluetooth_port)
+    def start_stream(self, bluetooth_port, impedance):
+        self.data_process, self.terminate_event = run_dsi24_headset_process(self.port, bluetooth_port, impedance)
 
     def process_frames(self):
         frames, timestamps, messages = [], [], []
@@ -42,8 +45,16 @@ class DSI24_Interface(DeviceInterface):
                 elif data['t'] == 'e':
                     raise DSIException(data['message']) # this will cause stop_stream to be called
                 elif data['t'] == 'd':
-                    frames.append(data['frame'])
-                    timestamps.append(data['timestamp'])
+                    self.battery_level = data['battery']
+                    if data['impedance'] == 0:
+                        frames.append(data['frame'])
+                        timestamps.append(data['timestamp'])
+                    else:
+                        self.impedanceValues = data['frame']
+                        frames.append(data['frame'])
+                        timestamps.append(data['timestamp'])
+
+
             except zmq.error.Again:
                 break
 

@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+service CVEPdummyScript {
+  rpc addSeqData(addSeqDataRequest) returns (google.protobuf.Empty);
+  rpc decodeChoice(google.protobuf.Empty) returns (decodeChoiceResponse);
+  rpc trainingModel(google.protobuf.Empty) returns (trainingModelResponse);
+}
+message addSeqDataRequest {
+  int32 sequenceNum = 1;
+  float Duration = 2;
+}
+message decodeChoiceResponse {
+  int32 message = 1;
+}
+message trainingModelResponse {
+  int32 message = 1;
+}

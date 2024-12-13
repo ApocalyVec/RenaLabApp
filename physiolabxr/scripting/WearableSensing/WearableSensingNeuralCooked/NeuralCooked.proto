@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+service NeuralCooked {
+  rpc add_seq_data(add_seq_dataRequest) returns (google.protobuf.Empty);
+  rpc decode(google.protobuf.Empty) returns (decodeResponse);
+  rpc training(google.protobuf.Empty) returns (trainingResponse);
+}
+message add_seq_dataRequest {
+  int32 sequenceNum = 1;
+  float duration = 2;
+}
+message decodeResponse {
+  int32 message = 1;
+}
+message trainingResponse {
+  int32 message = 1;
+}

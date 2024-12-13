@@ -1,0 +1,29 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+service RPCExample {
+  rpc ExampleOneArgOneReturn(ExampleOneArgOneReturnRequest) returns (ExampleOneArgOneReturnResponse);
+  rpc TestRPCNoArgs(google.protobuf.Empty) returns (TestRPCNoArgsResponse);
+  rpc TestRPCNoInputNoReturn(google.protobuf.Empty) returns (google.protobuf.Empty);
+  rpc TestRPCNoReturn(TestRPCNoReturnRequest) returns (google.protobuf.Empty);
+  rpc TestRPCTwoArgTwoReturn(TestRPCTwoArgTwoReturnRequest) returns (TestRPCTwoArgTwoReturnResponse);
+}
+message ExampleOneArgOneReturnRequest {
+  string input0 = 1;
+}
+message ExampleOneArgOneReturnResponse {
+  string message = 1;
+}
+message TestRPCNoArgsResponse {
+  string message = 1;
+}
+message TestRPCNoReturnRequest {
+  float input0 = 1;
+}
+message TestRPCTwoArgTwoReturnRequest {
+  string input0 = 1;
+  int32 input1 = 2;
+}
+message TestRPCTwoArgTwoReturnResponse {
+  string message0 = 1;
+  int32 message1 = 2;
+}

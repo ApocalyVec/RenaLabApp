@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "r5py4xa+ux0=",
+  "success": true,
+  "projectFilePath": "D:\\School Stuff\\PhysioLabXR\\PhysioLabXR-Community\\tmpGrpcTools\\tmpGrpcTools.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tlupe\\.nuget\\packages\\grpc.tools\\2.66.0\\grpc.tools.2.66.0.nupkg.sha512"
+  ],
+  "logs": []
+}

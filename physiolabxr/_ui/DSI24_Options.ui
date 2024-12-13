@@ -39,18 +39,439 @@
     </layout>
    </item>
    <item>
-    <widget class="QPushButton" name="check_impedance_btn">
+    <widget class="QCheckBox" name="check_impedance_chkbx">
      <property name="text">
       <string>Check Impedance</string>
      </property>
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <widget class="QWidget" name="widget" native="true">
+     <widget class="QLabel" name="FP1">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>0</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;
+</string>
+      </property>
+      <property name="text">
+       <string>FP1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="FP2">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>0</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>FP2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="F7">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>F7</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="F3">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>50</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>F3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Fz">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>70</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>FZ</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="F8">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>20</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>F8</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="F4">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>50</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>F4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="C3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>C3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Cz">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>CZ</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="C4">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>C4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="T4">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>T4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="T3">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>T3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="T5">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>180</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>T5</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="P3">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>160</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>P3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Pz">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>140</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>Pz CMF</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="P4">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>160</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>P4</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="T6">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>180</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>T6</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="O1">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>200</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>O1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="O2">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>200</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>O2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="A1">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>A1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="A2">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    background-color: gray;
+    color: black;</string>
+      </property>
+      <property name="text">
+       <string>A2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Green: Good</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Yellow: Ok</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Red: Bad</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="label_5">
        <property name="text">
         <string>Battery Level</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QProgressBar" name="batteryBar1">
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QProgressBar" name="batteryBar2">
+       <property name="value">
+        <number>24</number>
        </property>
       </widget>
      </item>
